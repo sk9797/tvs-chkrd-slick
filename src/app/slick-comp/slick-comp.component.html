@@ -1,0 +1,17 @@
+<ngx-slick-carousel class="carousel" 
+#slickModal="slick-carousel" 
+[config]="slideConfig" 
+>
+<div ngxSlickItem *ngFor="let slide of slideArray" class="slide">
+<p>{{slide}}</p>
+</div>
+</ngx-slick-carousel>
+<!-- <ul id="slickCar">
+<li *ngFor="let slide of slideArray;
+index as ind;
+last as lastInd;
+trackBy: trackByIndex
+">
+{{slide}}
+</li>
+</ul> -->
