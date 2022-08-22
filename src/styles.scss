@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+body .slick-prev, 
+body .slick-next {
+  z-index: 100;
+}
+
+body .slick-prev{
+  left: 5px;
+}
+
+body .slick-next{
+  right: 5px;
+}
+
+.carousel{
+  .slick-list{
+    .slick-track{
+      .slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
