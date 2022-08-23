@@ -1,5 +1,10 @@
 <div class="overlay" (click)="closeMe()">
-  <div class="modal_container">
+  <div class="modal_container"
+  [ngClass]="{
+    'opening' : modalOpening,
+    'closing' : modalClosing
+  }"
+  >
     <h1 class="title">{{ title }}</h1>
     <p class="body">{{ body }}</p>
     <div class="btn-container">

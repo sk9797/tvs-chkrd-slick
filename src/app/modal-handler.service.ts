@@ -14,6 +14,7 @@ export class ModalHandlerService {
     this.componentRef = entry.createComponent(ModalCompComponent)
     this.componentRef.instance.title = modalTitle
     this.componentRef.instance.body = modalBody
+    this.componentRef.instance.modalOpening = true
     this.componentRef.instance.closeMeEvent.subscribe(() => this.closeModal());
     this.componentRef.instance.confirmEvent.subscribe(() => this.confirm());
     this.componentSubscriber = new Subject<string>();
@@ -21,6 +22,7 @@ export class ModalHandlerService {
   }
 
   closeModal() {
+    this.componentRef.instance.modalClosing = true
     this.componentSubscriber.complete();
     this.componentRef.destroy();
   }

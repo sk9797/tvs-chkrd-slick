@@ -7,10 +7,13 @@ import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angu
   styleUrls: ['./modal-comp.component.scss']
 })
 export class ModalCompComponent implements OnInit, OnDestroy {
-  @Input() title: string =''
-  @Input() body: string =''
+  @Input() title: string = ''
+  @Input() body: string = ''
   @Output() closeMeEvent = new EventEmitter();
   @Output() confirmEvent = new EventEmitter();
+  @Input() modalActive: boolean = false
+  @Input() modalOpening: boolean = false
+  @Input() modalClosing: boolean = false
   constructor() { }
 
   ngOnInit(): void {

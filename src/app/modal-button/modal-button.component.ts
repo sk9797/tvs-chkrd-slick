@@ -28,7 +28,7 @@ export class ModalButtonComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.sub) this.sub.remove
+    if (this.sub) this.sub.unsubscribe()
     
   }
 }

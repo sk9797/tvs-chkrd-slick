@@ -23,11 +23,22 @@
   justify-content: center;
   align-items: center;
   border-radius: 16px;
+  // position: absolute;
+  animation: slideDown 0.3s linear;
 
   .btn-container{
     display: flex;
   } 
   button{
     margin: 5px;
+  }
+}
+
+@keyframes slideDown {
+  0%{
+    transform: translate(0, -50%);
+  }
+  100%{
+    transform: translate(0, 0%);
   }
 }
