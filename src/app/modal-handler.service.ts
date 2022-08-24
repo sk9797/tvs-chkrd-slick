@@ -18,13 +18,20 @@ export class ModalHandlerService {
     this.componentRef.instance.closeMeEvent.subscribe(() => this.closeModal());
     this.componentRef.instance.confirmEvent.subscribe(() => this.confirm());
     this.componentSubscriber = new Subject<string>();
+    document.body.style.overflow = 'hidden'
+    document.body.style.paddingRight = '17px'
     return this.componentSubscriber.asObservable();
   }
 
   closeModal() {
     this.componentRef.instance.modalClosing = true
-    this.componentSubscriber.complete();
-    this.componentRef.destroy();
+    const t = setTimeout(() => {
+      clearTimeout(t)
+      document.body.style.removeProperty('overflow')
+      document.body.style.removeProperty('padding-right')
+      this.componentSubscriber.complete();
+      this.componentRef.destroy();
+    }, 250)
   }
 
   confirm() {
