@@ -35,6 +35,10 @@
 
   .btn-container{
     display: flex;
+
+    button:focus{
+      border: 1px red dashed;
+    }
   } 
   button{
     margin: 5px;
@@ -49,16 +53,24 @@
     line-height: 1;
     font-weight: 700;
     margin: 1rem;
+    text-decoration: none;
+    text-transform: none;
+
+    &:hover{
+      text-decoration: none;
+      text-transform: none;
+      color: inherit;
+    }
 
     &:focus{
       border: 1px red dashed;
     }
-    &:focus-visible{
-      border: 1px red dashed;
-    }
-    &:focus-within{
-      border: 1px red dashed;
-    }
+    // &:focus-visible{
+    //   border: 1px red dashed;
+    // }
+    // &:focus-within{
+    //   border: 1px red dashed;
+    // }
   }
 }
 

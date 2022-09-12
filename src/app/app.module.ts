@@ -6,6 +6,11 @@ import { SlickCompComponent } from './slick-comp/slick-comp.component';
 import { SlickOldCompComponent } from './slick-old-comp/slick-old-comp.component';
 import { ModalCompComponent } from './modal-comp/modal-comp.component';
 import { ModalButtonComponent } from './modal-button/modal-button.component';
+import { ModalDataCompComponent } from './modal-data-comp/modal-data-comp.component';
+import { ModalButtonDirective } from './shared/directives/modal-button.directive';
+
+
+
 
 @NgModule({
   declarations: [
@@ -13,7 +18,9 @@ import { ModalButtonComponent } from './modal-button/modal-button.component';
     SlickCompComponent,
     SlickOldCompComponent,
     ModalCompComponent,
-    ModalButtonComponent
+    ModalButtonComponent,
+    ModalDataCompComponent,
+    ModalButtonDirective
   ],
   imports: [
     BrowserModule,

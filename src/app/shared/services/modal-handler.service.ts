@@ -1,6 +1,7 @@
 import { ComponentFactoryResolver, ComponentRef, Injectable, ViewContainerRef } from '@angular/core';
 import { Subject } from 'rxjs';
-import { ModalCompComponent } from './modal-comp/modal-comp.component';
+import { ModalCompComponent } from 'src/app/modal-comp/modal-comp.component';
+
 
 @Injectable({
   providedIn: 'root'

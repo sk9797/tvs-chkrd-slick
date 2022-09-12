@@ -1,6 +1,7 @@
-import { ModalHandlerService } from './../modal-handler.service';
+
 import { Component, Input, OnDestroy, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { ModalHandlerService } from '../shared/services/modal-handler.service';
 
 @Component({
   selector: 'app-modal-button',
@@ -24,7 +25,7 @@ export class ModalButtonComponent implements OnInit, OnDestroy {
   createModal(){
     this.sub = this.modalHandlerServices
     .openModal(this.entry, this.modalTitle, this.modalBody)
-    .subscribe((v) => console.log(v))
+    .subscribe((v: any) => console.log(v))
   }
 
   ngOnDestroy(): void {

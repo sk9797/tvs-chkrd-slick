@@ -1,6 +1,4 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
-import { ModalHandlerService } from '../modal-handler.service';
-
 
 @Component({
   selector: 'app-modal-comp',
@@ -16,15 +14,22 @@ export class ModalCompComponent implements OnInit, OnDestroy, AfterViewInit {
   @Input() modalOpening: boolean = false
   @Input() modalClosing: boolean = false
 
-  @ViewChild('close') closeButtonElement!: ElementRef<HTMLElement>
-  constructor() { }
+  @ViewChild('modalContainer') modalContainer!: ElementRef
+  @ViewChild('close') 
+  closeButtonElement !: ElementRef<HTMLElement>
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
   }
-
+  
   ngAfterViewInit(): void{
-    console.log(this.closeButtonElement)
+    // setTimeout(() => {
+    //   this.closeButtonElement.nativeElement.focus()  
+    // }, 0);
     this.closeButtonElement.nativeElement.focus()
+    // this.closeButtonElement.nativeElement.classList.add('hello')
+
+    // let closeButton: HTMLElement = <HTMLElement>document.getElementById('closeButton')
+    // closeButton?.focus()
   }  
 
   closeMe() {
